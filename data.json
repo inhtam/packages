@@ -1,0 +1,7 @@
+{
+  "name": "sayidisi",
+  "version": "1.0.0",
+  "branch": "main",
+  "path": "cli",
+  "main": "main.js"
+}
