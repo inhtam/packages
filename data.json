@@ -1,6 +1,7 @@
 {
   "name": "sayidisi",
   "version": "1.0.0",
+  "repo": "https://github.com/aardaakpinar/sayidisi",
   "branch": "main",
   "path": "cli",
   "main": "main.js"
