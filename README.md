@@ -1,7 +1,7 @@
 # 🧠 INH Packages Repository
 
-Welcome to the official **INH CLI packages repository**.  
-This repo contains JavaScript-based terminal packages that can be installed and run using the [INH CLI](https://github.com/inhtam/inh).
+This repository contains the **official package index** for [INH CLI](https://github.com/inhtam/inh).
+All installable packages are listed in [`data.json`](https://raw.githubusercontent.com/inhtam/packages/main/data.json).
 
 ---
 ## 🔹 Badges
@@ -16,69 +16,67 @@ This repo contains JavaScript-based terminal packages that can be installed and 
 
 ## 📦 How It Works
 
-- Each package is in its own folder with a `package.json` including `"inh": true` and `"main"` fields.
-- The INH CLI downloads packages directly from this repository via GitHub raw links.
-- Users **cannot upload directly** to this repo; contributions must be made via Pull Requests (PRs).
+* The CLI fetches the `data.json` file to discover available packages.
+* Each entry in `data.json` describes one package.
+* When users run `inh install <name>`, the package source is downloaded from GitHub using the info in `data.json`.
 
 ---
 
-## 🔹 Installing Packages
+## 📑 Example Entry
 
-Using INH CLI:
-
-```bash
-# Install a package
-inh install sayidisi
-````
-
----
-
-## 🔹 Contributing Packages
-
-We welcome contributions via GitHub Pull Requests.
-
-1. **Fork this repository**.
-2. **Create a new branch** for your package or changes:
-
-```bash
-git checkout -b feature/my-new-package
-```
-
-3. **Add your package** in a separate folder, include `package.json` with:
+A package entry in `data.json` looks like this:
 
 ```json
 {
-  "name": "my-package",
+  "name": "sayidisi",
   "version": "1.0.0",
-  "inh": true,
-  "main": "index.js"
+  "repo": "https://github.com/aardaakpinar/sayidisi",
+  "branch": "main",
+  "path": "cli",
+  "main": "main.js"
 }
 ```
 
-4. **Commit and push** your changes:
+---
 
-```bash
-git add .
-git commit -m "Add new INH package: my-package"
-git push origin feature/my-new-package
-```
+## 🔹 Required Fields
 
-5. **Create a Pull Request** against the main branch of this repo.
-6. Your PR will be reviewed and merged by the INH maintainers.
+Every package **must** include the following fields:
+
+| Field     | Description                                      |
+| --------- | ------------------------------------------------ |
+| `name`    | Package name (used in CLI: `inh install <name>`) |
+| `version` | Version number (semver format)                   |
+| `repo`    | GitHub repository URL                            |
+| `branch`  | Branch name (e.g., `main`)                       |
+| `path`    | Path to the package folder inside the repo       |
+| `main`    | Entry file to execute (e.g., `index.js`)         |
+
+Optional fields like `description` or `author` can be added, but are not required.
 
 ---
 
-## 🔹 Directory Structure
+## 🔧 Contributing a Package
 
-```
-inh-packages/
-├─ package-one/
-│  ├─ package.json
-│  └─ index.js
-├─ package-two/
-│  ├─ package.json
-│  └─ main.js
-└─ README.md
-```
+1. **Fork this repository.**
+2. **Edit `data.json`** and add a new object for your package with all required fields.
+3. **Commit your changes** and push them to your fork.
+4. **Open a Pull Request** to the `main` branch of this repo.
+5. A maintainer will review and approve your contribution. ✅
 
 ---
+
+## 📂 Example `data.json`
+
+```json
+[
+  {
+    "name": "sayidisi",
+    "version": "1.0.0",
+    "repo": "https://github.com/aardaakpinar/sayidisi",
+    "branch": "main",
+    "path": "cli",
+    "main": "main.js"
+  }
+]
+```
