@@ -4,7 +4,7 @@ Welcome to the official **INH CLI packages repository**.
 This repo contains JavaScript-based terminal packages that can be installed and run using the [INH CLI](https://github.com/inhtam/inh).
 
 ---
-## 🔹 Badges (Optional)
+## 🔹 Badges
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/inhtam/packages)
 ![GitHub forks](https://img.shields.io/github/forks/inhtam/packages)
