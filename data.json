@@ -1,10 +1,9 @@
 [
   {
-    "name": "sayidisi",
+    "name": "vakit",
     "version": "1.0.0",
-    "repo": "https://github.com/aardaakpinar/sayidisi",
+    "repo": "https://github.com/aardaakpinar/vakit",
     "branch": "main",
-    "path": "cli",
-    "main": "main.js"
+    "main": "app.js"
   }
 ]
