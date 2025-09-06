@@ -12,6 +12,6 @@
     "repo": "https://github.com/aardaakpinar/sayidisi",
     "branch": "main",
     "path": "cli",
-    "main": "app.js"
+    "main": "main.js"
   }
 ]
