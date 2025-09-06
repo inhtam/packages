@@ -5,5 +5,13 @@
     "repo": "https://github.com/aardaakpinar/vakit",
     "branch": "main",
     "main": "app.js"
+  }, 
+  {
+    "name": "sayidisi",
+    "version": "1.0.0",
+    "repo": "https://github.com/aardaakpinar/sayidisi",
+    "branch": "main",
+    "path": "cli",
+    "main": "app.js"
   }
 ]
